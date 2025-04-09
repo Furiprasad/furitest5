@@ -29,6 +29,11 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				'whatsapp-green': '#25D366',
+                'whatsapp-teal': '#075E54',
+                'qr-primary': '#5F6AFF',
+                'qr-dark': '#082032',
+                'qr-light': '#F0F2FF',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))',
