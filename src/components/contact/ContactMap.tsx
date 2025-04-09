@@ -3,7 +3,7 @@ import React from "react";
 
 const ContactMap = () => {
   return (
-    <section className="section-padding bg-gray-50">
+    <section className="section-padding bg-gray-50" id="map">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="mb-4">Visit Our Office</h2>
@@ -15,7 +15,7 @@ const ContactMap = () => {
         <div className="bg-white p-4 rounded-lg shadow-md">
           <div className="aspect-video w-full h-full rounded-lg overflow-hidden">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387191.03605924656!2d-74.25987368715491!3d40.69767006766623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1650274783975!5m2!1sen!2sin" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.0657707833793!2d83.30976799999999!3d17.7415399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3943e78e23e907%3A0xddb7a1ef64b5f256!2sFuri%20Media%20Services!5e0!3m2!1sen!2sin!4v1744179498773!5m2!1sen!2sin" 
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 

@@ -5,8 +5,15 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
 const CallToAction = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
   return (
-    <section className="py-20 relative overflow-hidden">
+    <section className="py-20 relative overflow-hidden" id="cta">
       <div className="absolute inset-0 gradient-bg opacity-90 -z-10"></div>
       
       <div className="container mx-auto">
@@ -20,7 +27,7 @@ const CallToAction = () => {
               size="lg"
               className="bg-white text-primary-800 hover:bg-white/90"
             >
-              <Link to="/contact" className="flex items-center gap-2">
+              <Link to="/contact" className="flex items-center gap-2" onClick={scrollToTop}>
                 Contact Us Today
                 <ArrowRight size={16} />
               </Link>
@@ -30,7 +37,7 @@ const CallToAction = () => {
               variant="outline"
               className="border-white text-white hover:bg-white/10"
             >
-              <Link to="/services">Explore Our Services</Link>
+              <Link to="/services" onClick={scrollToTop}>Explore Our Services</Link>
             </Button>
           </div>
         </div>

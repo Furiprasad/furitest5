@@ -23,7 +23,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="section-padding">
+    <section className="section-padding" id="contact-form">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
@@ -40,7 +40,7 @@ const ContactForm = () => {
                 <div>
                   <h3 className="text-lg font-bold mb-1">Office Location</h3>
                   <p className="text-gray-700">
-                    123 Marketing Street, Digital City, 12345
+                    TPT Colony, Balayya Sastri Layout, Seethammadara, Visakhapatnam, Andhra Pradesh 530013
                   </p>
                 </div>
               </div>
@@ -51,7 +51,7 @@ const ContactForm = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold mb-1">Phone Number</h3>
-                  <p className="text-gray-700">+1 (555) 123-4567</p>
+                  <p className="text-gray-700">7416992299</p>
                 </div>
               </div>
               
@@ -61,7 +61,7 @@ const ContactForm = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold mb-1">Email Address</h3>
-                  <p className="text-gray-700">contact@furimedia.com</p>
+                  <p className="text-gray-700">furimediaservices@gmail.com</p>
                 </div>
               </div>
               
@@ -71,7 +71,7 @@ const ContactForm = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold mb-1">Working Hours</h3>
-                  <p className="text-gray-700">Monday - Friday: 9:00 AM - 6:00 PM</p>
+                  <p className="text-gray-700">Monday - Friday: 9:30 AM - 6:30 PM</p>
                 </div>
               </div>
             </div>
@@ -126,7 +126,7 @@ const ContactForm = () => {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="phone">Phone Number</Label>
-                      <Input id="phone" placeholder="+1 (555) 123-4567" />
+                      <Input id="phone" placeholder="7416992299" />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="subject">Subject</Label>

@@ -7,13 +7,13 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gray-900 text-white" id="footer">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-16">
           <div>
             <div className="mb-6">
               <Link to="/" className="font-heading text-2xl font-bold">
-                Furi<span className="text-secondary-400">Media</span>
+                Furi<span className="text-secondary-400">Media</span> Services
               </Link>
             </div>
             <p className="text-gray-400 mb-6">
@@ -103,16 +103,16 @@ const Footer = () => {
               <li className="flex items-start space-x-3">
                 <MapPin className="text-secondary-400 mt-1 flex-shrink-0" size={18} />
                 <span className="text-gray-400">
-                  123 Marketing Street, Digital City, 12345
+                  TPT Colony, Balayya Sastri Layout, Seethammadara, Visakhapatnam, Andhra Pradesh 530013
                 </span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="text-secondary-400 flex-shrink-0" size={18} />
-                <span className="text-gray-400">+1 (555) 123-4567</span>
+                <span className="text-gray-400">7416992299</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="text-secondary-400 flex-shrink-0" size={18} />
-                <span className="text-gray-400">contact@furimedia.com</span>
+                <span className="text-gray-400">furimediaservices@gmail.com</span>
               </li>
             </ul>
           </div>

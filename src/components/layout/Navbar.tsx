@@ -35,6 +35,13 @@ const Navbar = () => {
     { name: "Contact Us", path: "/contact" },
   ];
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -46,9 +53,9 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center">
+            <Link to="/" className="flex items-center" onClick={scrollToTop}>
               <span className="font-heading text-2xl font-bold text-primary-800">
-                Furi<span className="text-secondary-800">Media</span>
+                Furi<span className="text-secondary-800">Media</span> Services
               </span>
             </Link>
           </div>
@@ -60,6 +67,7 @@ const Navbar = () => {
                   key={link.name}
                   to={link.path}
                   className="font-medium text-gray-800 hover:text-primary-600 transition-colors"
+                  onClick={scrollToTop}
                 >
                   {link.name}
                 </Link>
@@ -69,7 +77,7 @@ const Navbar = () => {
 
           <div className="hidden md:block">
             <Button variant="default" className="bg-accent-500 hover:bg-accent-600">
-              Get Started
+              <Link to="/contact" onClick={scrollToTop}>Get Started</Link>
             </Button>
           </div>
 
@@ -96,7 +104,10 @@ const Navbar = () => {
               key={link.name}
               to={link.path}
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:text-primary-600 hover:bg-gray-50"
-              onClick={() => setIsOpen(false)}
+              onClick={() => {
+                setIsOpen(false);
+                scrollToTop();
+              }}
             >
               {link.name}
             </Link>
@@ -106,7 +117,15 @@ const Navbar = () => {
               variant="default"
               className="w-full bg-accent-500 hover:bg-accent-600"
             >
-              Get Started
+              <Link 
+                to="/contact"
+                onClick={() => {
+                  setIsOpen(false);
+                  scrollToTop();
+                }}
+              >
+                Get Started
+              </Link>
             </Button>
           </div>
         </div>
