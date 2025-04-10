@@ -58,8 +58,8 @@ const EmailSignatureGenerator = () => {
           <table cellPadding="0" cellSpacing="0" style={{ fontFamily: "Arial, sans-serif", fontSize: "14px", color: "#333333" }}>
             <tbody>
               <tr>
-                <td style={{ paddingRight: "15px", borderRight: "3px solid #6366f1" }}>
-                  {formData.name && <div style={{ fontWeight: "bold", fontSize: "16px", color: "#4f46e5" }}>{formData.name}</div>}
+                <td style={{ paddingRight: "15px", borderRight: "3px solid #ea384c" }}>
+                  {formData.name && <div style={{ fontWeight: "bold", fontSize: "16px", color: "#ea384c" }}>{formData.name}</div>}
                   {formData.position && <div style={{ color: "#6b7280" }}>{formData.position}</div>}
                   {formData.company && <div style={{ fontWeight: "bold" }}>{formData.company}</div>}
                 </td>
@@ -72,7 +72,7 @@ const EmailSignatureGenerator = () => {
                   {formData.email && (
                     <div style={{ marginBottom: "5px" }}>
                       <span style={{ color: "#6b7280", paddingRight: "5px" }}>📧</span>{" "}
-                      <a href={`mailto:${formData.email}`} style={{ color: "#4f46e5", textDecoration: "none" }}>
+                      <a href={`mailto:${formData.email}`} style={{ color: "#ea384c", textDecoration: "none" }}>
                         {formData.email}
                       </a>
                     </div>
@@ -80,7 +80,7 @@ const EmailSignatureGenerator = () => {
                   {formData.website && (
                     <div style={{ marginBottom: "5px" }}>
                       <span style={{ color: "#6b7280", paddingRight: "5px" }}>🌐</span>{" "}
-                      <a href={formData.website.startsWith("http") ? formData.website : `https://${formData.website}`} style={{ color: "#4f46e5", textDecoration: "none" }}>
+                      <a href={formData.website.startsWith("http") ? formData.website : `https://${formData.website}`} style={{ color: "#ea384c", textDecoration: "none" }}>
                         {formData.website}
                       </a>
                     </div>
@@ -88,7 +88,7 @@ const EmailSignatureGenerator = () => {
                   {formData.linkedIn && (
                     <div style={{ marginBottom: "5px" }}>
                       <span style={{ color: "#6b7280", paddingRight: "5px" }}>in</span>{" "}
-                      <a href={formData.linkedIn.startsWith("http") ? formData.linkedIn : `https://${formData.linkedIn}`} style={{ color: "#4f46e5", textDecoration: "none" }}>
+                      <a href={formData.linkedIn.startsWith("http") ? formData.linkedIn : `https://${formData.linkedIn}`} style={{ color: "#ea384c", textDecoration: "none" }}>
                         LinkedIn
                       </a>
                     </div>
@@ -132,7 +132,7 @@ const EmailSignatureGenerator = () => {
                   {formData.phone && <span>{formData.phone} | </span>}
                   {formData.email && (
                     <span>
-                      <a href={`mailto:${formData.email}`} style={{ color: "#4f46e5", textDecoration: "none" }}>
+                      <a href={`mailto:${formData.email}`} style={{ color: "#ea384c", textDecoration: "none" }}>
                         {formData.email}
                       </a>
                       {(formData.website || formData.linkedIn) ? " | " : ""}
@@ -140,7 +140,7 @@ const EmailSignatureGenerator = () => {
                   )}
                   {formData.website && (
                     <span>
-                      <a href={formData.website.startsWith("http") ? formData.website : `https://${formData.website}`} style={{ color: "#4f46e5", textDecoration: "none" }}>
+                      <a href={formData.website.startsWith("http") ? formData.website : `https://${formData.website}`} style={{ color: "#ea384c", textDecoration: "none" }}>
                         Website
                       </a>
                       {formData.linkedIn ? " | " : ""}
@@ -148,7 +148,7 @@ const EmailSignatureGenerator = () => {
                   )}
                   {formData.linkedIn && (
                     <span>
-                      <a href={formData.linkedIn.startsWith("http") ? formData.linkedIn : `https://${formData.linkedIn}`} style={{ color: "#4f46e5", textDecoration: "none" }}>
+                      <a href={formData.linkedIn.startsWith("http") ? formData.linkedIn : `https://${formData.linkedIn}`} style={{ color: "#ea384c", textDecoration: "none" }}>
                         LinkedIn
                       </a>
                     </span>
@@ -166,9 +166,9 @@ const EmailSignatureGenerator = () => {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-      <div className="p-6 border-b border-gray-200">
-        <h2 className="text-xl font-semibold mb-2">Create Your Email Signature</h2>
+    <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-red-100">
+      <div className="p-6 border-b border-red-100">
+        <h2 className="text-xl font-semibold mb-2 text-red-600">Create Your Email Signature</h2>
         <p className="text-sm text-gray-600 mb-4">
           Fill in the form below to generate a professional email signature.
         </p>
@@ -182,6 +182,7 @@ const EmailSignatureGenerator = () => {
                 placeholder="John Doe"
                 value={formData.name}
                 onChange={handleInputChange}
+                className="border-red-200 focus:border-red-400 focus:ring-red-400"
               />
             </div>
             
@@ -192,6 +193,7 @@ const EmailSignatureGenerator = () => {
                 placeholder="Marketing Manager"
                 value={formData.position}
                 onChange={handleInputChange}
+                className="border-red-200 focus:border-red-400 focus:ring-red-400"
               />
             </div>
             
@@ -202,6 +204,7 @@ const EmailSignatureGenerator = () => {
                 placeholder="Acme Inc."
                 value={formData.company}
                 onChange={handleInputChange}
+                className="border-red-200 focus:border-red-400 focus:ring-red-400"
               />
             </div>
             
@@ -212,6 +215,7 @@ const EmailSignatureGenerator = () => {
                 placeholder="+1 (555) 123-4567"
                 value={formData.phone}
                 onChange={handleInputChange}
+                className="border-red-200 focus:border-red-400 focus:ring-red-400"
               />
             </div>
             
@@ -223,6 +227,7 @@ const EmailSignatureGenerator = () => {
                 placeholder="john.doe@example.com"
                 value={formData.email}
                 onChange={handleInputChange}
+                className="border-red-200 focus:border-red-400 focus:ring-red-400"
               />
             </div>
             
@@ -233,6 +238,7 @@ const EmailSignatureGenerator = () => {
                 placeholder="www.example.com"
                 value={formData.website}
                 onChange={handleInputChange}
+                className="border-red-200 focus:border-red-400 focus:ring-red-400"
               />
             </div>
             
@@ -243,6 +249,7 @@ const EmailSignatureGenerator = () => {
                 placeholder="linkedin.com/in/johndoe"
                 value={formData.linkedIn}
                 onChange={handleInputChange}
+                className="border-red-200 focus:border-red-400 focus:ring-red-400"
               />
             </div>
             
@@ -253,6 +260,7 @@ const EmailSignatureGenerator = () => {
                 placeholder="123 Main St, City, Country"
                 value={formData.address}
                 onChange={handleInputChange}
+                className="border-red-200 focus:border-red-400 focus:ring-red-400"
               />
             </div>
             
@@ -263,7 +271,7 @@ const EmailSignatureGenerator = () => {
                 placeholder="Helping businesses grow through innovative solutions"
                 value={formData.tagline}
                 onChange={handleInputChange}
-                className="resize-none"
+                className="resize-none border-red-200 focus:border-red-400 focus:ring-red-400"
                 rows={2}
               />
             </div>
@@ -274,10 +282,10 @@ const EmailSignatureGenerator = () => {
       <div className="p-6">
         <Tabs defaultValue="modern" value={activeTemplate} onValueChange={setActiveTemplate}>
           <div className="flex justify-between items-center mb-4">
-            <h3 className="text-lg font-medium">Your Signature Preview</h3>
-            <TabsList>
-              <TabsTrigger value="modern">Modern</TabsTrigger>
-              <TabsTrigger value="minimal">Minimal</TabsTrigger>
+            <h3 className="text-lg font-medium text-red-600">Your Signature Preview</h3>
+            <TabsList className="border-red-200">
+              <TabsTrigger value="modern" className="data-[state=active]:bg-red-100 data-[state=active]:text-red-600">Modern</TabsTrigger>
+              <TabsTrigger value="minimal" className="data-[state=active]:bg-red-100 data-[state=active]:text-red-600">Minimal</TabsTrigger>
             </TabsList>
           </div>
           
@@ -291,7 +299,7 @@ const EmailSignatureGenerator = () => {
         </Tabs>
         
         <div className="mt-4 text-right">
-          <Button onClick={copyToClipboard} className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700">
+          <Button onClick={copyToClipboard} className="bg-red-600 hover:bg-red-700">
             Copy Signature
           </Button>
         </div>

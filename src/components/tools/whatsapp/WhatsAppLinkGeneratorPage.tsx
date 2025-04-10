@@ -16,10 +16,10 @@ const WhatsAppLinkGeneratorPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-[#25D366]/10 py-10">
+    <div className="min-h-screen bg-gradient-to-b from-white to-red-50 py-10">
       <div className="container px-4">
         <header className="text-center mb-10">
-          <h1 className="text-3xl font-bold text-[#075E54] mb-2">WhatsApp Link Generator</h1>
+          <h1 className="text-3xl font-bold text-red-600 mb-2">WhatsApp Link Generator</h1>
           <p className="text-gray-600">Create shareable WhatsApp links with custom messages</p>
         </header>
 

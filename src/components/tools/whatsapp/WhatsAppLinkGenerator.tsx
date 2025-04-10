@@ -54,8 +54,8 @@ const WhatsAppLinkGenerator = ({ onPhoneChange, onMessageChange }: WhatsAppLinkG
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-md p-6">
-      <h2 className="text-xl font-semibold mb-6">Create Your WhatsApp Link</h2>
+    <div className="bg-white rounded-lg shadow-md p-6 border border-red-100">
+      <h2 className="text-xl font-semibold mb-6 text-red-600">Create Your WhatsApp Link</h2>
       
       <div className="space-y-4">
         <div>
@@ -68,7 +68,7 @@ const WhatsAppLinkGenerator = ({ onPhoneChange, onMessageChange }: WhatsAppLinkG
             placeholder="e.g., 917416992299"
             value={phoneNumber}
             onChange={handlePhoneNumberChange}
-            className="w-full"
+            className="w-full border-red-200 focus:border-red-400 focus:ring-red-400"
           />
           <p className="text-xs text-gray-500 mt-1">Include country code without + or spaces (e.g., 917416992299)</p>
         </div>
@@ -82,19 +82,19 @@ const WhatsAppLinkGenerator = ({ onPhoneChange, onMessageChange }: WhatsAppLinkG
             placeholder="Hello, I'd like to know more about your services."
             value={message}
             onChange={handleMessageChange}
-            className="w-full h-32"
+            className="w-full h-32 border-red-200 focus:border-red-400 focus:ring-red-400"
           />
         </div>
 
         <Button 
           onClick={generateLink}
-          className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white"
+          className="w-full bg-red-600 hover:bg-red-700 text-white"
         >
           Generate Link
         </Button>
 
         {generatedLink && (
-          <div className="mt-6 p-4 bg-gray-50 rounded-md">
+          <div className="mt-6 p-4 bg-red-50 rounded-md">
             <label className="block text-sm font-medium text-gray-700 mb-2">
               Your WhatsApp Link:
             </label>
@@ -102,11 +102,11 @@ const WhatsAppLinkGenerator = ({ onPhoneChange, onMessageChange }: WhatsAppLinkG
               <Input
                 readOnly
                 value={generatedLink}
-                className="flex-grow rounded-r-none"
+                className="flex-grow rounded-r-none border-red-200"
               />
               <Button 
                 onClick={copyToClipboard}
-                className="rounded-l-none"
+                className="rounded-l-none bg-red-600 hover:bg-red-700"
               >
                 Copy
               </Button>

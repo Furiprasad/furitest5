@@ -65,10 +65,10 @@ const QRCodeGenerator = () => {
   };
 
   return (
-    <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+    <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden border border-red-100">
       <div className="grid grid-cols-1 md:grid-cols-2">
-        <div className="p-6 border-r border-gray-100">
-          <h2 className="text-xl font-semibold mb-4">Generate Your Review QR Code</h2>
+        <div className="p-6 border-r border-red-100">
+          <h2 className="text-xl font-semibold mb-4 text-red-600">Generate Your Review QR Code</h2>
           
           <div className="space-y-4">
             <div>
@@ -80,6 +80,7 @@ const QRCodeGenerator = () => {
                 placeholder="Your Business Name"
                 value={businessName}
                 onChange={handleBusinessNameChange}
+                className="border-red-200 focus:border-red-400 focus:ring-red-400"
               />
             </div>
             
@@ -93,6 +94,7 @@ const QRCodeGenerator = () => {
                 value={mapLink}
                 onChange={handleMapLinkChange}
                 required
+                className="border-red-200 focus:border-red-400 focus:ring-red-400"
               />
               <p className="text-xs text-gray-500 mt-1">
                 Paste your Google Maps link here. You can get this by searching for your business on Google Maps and clicking "Share".
@@ -101,7 +103,7 @@ const QRCodeGenerator = () => {
             
             <Button
               onClick={generateQRCode}
-              className="w-full bg-primary-600 hover:bg-primary-700"
+              className="w-full bg-red-600 hover:bg-red-700"
               disabled={isLoading}
             >
               {isLoading ? "Generating..." : "Generate QR Code"}
@@ -110,9 +112,9 @@ const QRCodeGenerator = () => {
         </div>
 
         <div className="p-6 flex flex-col items-center justify-center" ref={qrRef}>
-          <h3 className="text-lg font-medium mb-4 text-center">Your Review QR Code</h3>
+          <h3 className="text-lg font-medium mb-4 text-center text-red-600">Your Review QR Code</h3>
           
-          <div className="border border-gray-200 rounded-lg p-4 w-[250px] h-[250px] flex items-center justify-center mb-4">
+          <div className="border border-red-200 rounded-lg p-4 w-[250px] h-[250px] flex items-center justify-center mb-4">
             {isLoading ? (
               <Skeleton className="w-[200px] h-[200px]" />
             ) : qrCodeUrl ? (
@@ -128,7 +130,7 @@ const QRCodeGenerator = () => {
             <Button
               onClick={downloadQRCode}
               variant="outline"
-              className="mt-2"
+              className="mt-2 border-red-200 text-red-600 hover:bg-red-50"
             >
               Download QR Code
             </Button>

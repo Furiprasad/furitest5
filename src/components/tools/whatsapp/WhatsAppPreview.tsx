@@ -11,14 +11,14 @@ const WhatsAppPreview = ({ phoneNumber, message }: WhatsAppPreviewProps) => {
     <div className="max-w-[280px] w-full">
       <div className="border-[8px] border-black rounded-[32px] relative bg-[#E5DDD5] overflow-hidden shadow-xl">
         {/* Phone Header */}
-        <div className="bg-[#075E54] text-white px-4 py-3">
+        <div className="bg-red-600 text-white px-4 py-3">
           <div className="flex items-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M19 12H5M12 19l-7-7 7-7"/>
             </svg>
             
             <div className="ml-6 flex items-center">
-              <div className="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center text-[#075E54] font-bold">
+              <div className="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center text-red-600 font-bold">
                 {phoneNumber ? phoneNumber.substring(0, 1) : "?"}
               </div>
               <div className="ml-2 truncate">
@@ -35,7 +35,7 @@ const WhatsAppPreview = ({ phoneNumber, message }: WhatsAppPreviewProps) => {
               <div className="text-sm break-words">{message}</div>
               <div className="text-right text-xs text-gray-500 mt-1">
                 {new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
-                <span className="ml-1 text-[#34B7F1]">✓✓</span>
+                <span className="ml-1 text-red-400">✓✓</span>
               </div>
               {/* Triangle */}
               <div className="absolute right-[-6px] top-0 w-3 h-3 overflow-hidden">
@@ -52,7 +52,7 @@ const WhatsAppPreview = ({ phoneNumber, message }: WhatsAppPreviewProps) => {
               {message ? message : "Type a message"}
             </span>
           </div>
-          <div className="w-10 h-10 rounded-full bg-[#25D366] ml-2 flex items-center justify-center text-white">
+          <div className="w-10 h-10 rounded-full bg-red-600 ml-2 flex items-center justify-center text-white">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
             </svg>
