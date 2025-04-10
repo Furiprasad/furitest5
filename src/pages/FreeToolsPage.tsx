@@ -1,16 +1,13 @@
-
 import React from "react";
 import { Link, Routes, Route, Navigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import WhatsAppLinkGeneratorPage from "@/components/tools/whatsapp/WhatsAppLinkGeneratorPage";
 import GoogleReviewsQRGeneratorPage from "@/components/tools/qrcode/GoogleReviewsQRGeneratorPage";
 import EmailSignatureGeneratorPage from "@/components/tools/email/EmailSignatureGeneratorPage";
-
 const FreeToolsPage = () => {
-  return (
-    <main className="pt-20">
+  return <main className="pt-20">
       <div className="container mx-auto px-4 py-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-center mb-8 text-red-600">Free Marketing Tools</h1>
+        <h1 className="text-4xl md:text-5xl font-bold text-center mb-8 text-red-600">Marketing Tools</h1>
         <p className="text-lg text-center text-gray-600 max-w-3xl mx-auto mb-12">
           Boost your marketing efforts with our collection of free, powerful tools designed to help your business grow.
         </p>
@@ -66,8 +63,6 @@ const FreeToolsPage = () => {
         <Route path="email-signature" element={<EmailSignatureGeneratorPage />} />
         <Route path="/" element={<></>} />
       </Routes>
-    </main>
-  );
+    </main>;
 };
-
 export default FreeToolsPage;
