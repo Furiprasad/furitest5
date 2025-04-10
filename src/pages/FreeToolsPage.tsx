@@ -4,6 +4,7 @@ import { Link, Routes, Route, Navigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import WhatsAppLinkGeneratorPage from "@/components/tools/whatsapp/WhatsAppLinkGeneratorPage";
 import GoogleReviewsQRGeneratorPage from "@/components/tools/qrcode/GoogleReviewsQRGeneratorPage";
+import EmailSignatureGeneratorPage from "@/components/tools/email/EmailSignatureGeneratorPage";
 
 const FreeToolsPage = () => {
   return (
@@ -14,7 +15,7 @@ const FreeToolsPage = () => {
           Boost your marketing efforts with our collection of free, powerful tools designed to help your business grow.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
             <div className="p-6 border-b">
               <h2 className="text-2xl font-bold mb-2">WhatsApp Link Generator</h2>
@@ -42,12 +43,27 @@ const FreeToolsPage = () => {
               </Link>
             </div>
           </div>
+
+          <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+            <div className="p-6 border-b">
+              <h2 className="text-2xl font-bold mb-2">Email Signature Generator</h2>
+              <p className="text-gray-600 mb-4">
+                Create professional email signatures that leave a lasting impression on your recipients.
+              </p>
+              <Link to="/free-tools/email-signature">
+                <Button className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white">
+                  Open Tool
+                </Button>
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
 
       <Routes>
         <Route path="whatsapp-link-generator" element={<WhatsAppLinkGeneratorPage />} />
         <Route path="google-reviews-qr" element={<GoogleReviewsQRGeneratorPage />} />
+        <Route path="email-signature" element={<EmailSignatureGeneratorPage />} />
         <Route path="/" element={<></>} />
       </Routes>
     </main>

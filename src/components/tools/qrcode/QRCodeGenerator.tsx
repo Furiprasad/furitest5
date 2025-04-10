@@ -7,7 +7,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 const QRCodeGenerator = () => {
   const [businessName, setBusinessName] = useState("");
-  const [placeId, setPlaceId] = useState("");
+  const [mapLink, setMapLink] = useState("");
   const [qrCodeUrl, setQrCodeUrl] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const qrRef = useRef<HTMLDivElement>(null);
@@ -16,20 +16,25 @@ const QRCodeGenerator = () => {
     setBusinessName(e.target.value);
   };
 
-  const handlePlaceIdChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPlaceId(e.target.value);
+  const handleMapLinkChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setMapLink(e.target.value);
   };
 
   const generateQRCode = () => {
-    if (!placeId) {
-      toast.error("Please enter your Google Place ID");
+    if (!mapLink) {
+      toast.error("Please enter your Google Maps Link");
       return;
+    }
+
+    if (!mapLink.includes("maps.google.com") && !mapLink.includes("goo.gl/maps")) {
+      toast.warning("Please enter a valid Google Maps link");
     }
 
     setIsLoading(true);
     
-    // Create the review URL
-    const reviewUrl = `https://search.google.com/local/writereview?placeid=${placeId}`;
+    // Create a review URL from the map link
+    // We're using the map link directly as the QR code content
+    const reviewUrl = mapLink;
     
     // Generate QR code using Google Charts API
     const qrUrl = `https://chart.googleapis.com/chart?cht=qr&chl=${encodeURIComponent(
@@ -40,6 +45,7 @@ const QRCodeGenerator = () => {
     setTimeout(() => {
       setQrCodeUrl(qrUrl);
       setIsLoading(false);
+      toast.success("QR code generated successfully!");
     }, 800);
   };
 
@@ -78,26 +84,18 @@ const QRCodeGenerator = () => {
             </div>
             
             <div>
-              <label htmlFor="placeId" className="block text-sm font-medium text-gray-700 mb-1">
-                Google Place ID <span className="text-red-500">*</span>
+              <label htmlFor="mapLink" className="block text-sm font-medium text-gray-700 mb-1">
+                Google Maps Link <span className="text-red-500">*</span>
               </label>
               <Input
-                id="placeId"
-                placeholder="e.g., ChIJN1t_tDeuEmsRUsoyG83frY4"
-                value={placeId}
-                onChange={handlePlaceIdChange}
+                id="mapLink"
+                placeholder="e.g., https://goo.gl/maps/xyz123"
+                value={mapLink}
+                onChange={handleMapLinkChange}
                 required
               />
               <p className="text-xs text-gray-500 mt-1">
-                Find your Place ID at{" "}
-                <a
-                  href="https://developers.google.com/maps/documentation/javascript/examples/places-placeid-finder"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 hover:underline"
-                >
-                  Google's Place ID Finder
-                </a>
+                Paste your Google Maps link here. You can get this by searching for your business on Google Maps and clicking "Share".
               </p>
             </div>
             
