@@ -1,6 +1,11 @@
 
 import React from "react";
 import { Separator } from "@/components/ui/separator";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem
+} from "@/components/ui/carousel";
 
 const ClientShowcase = () => {
   const clients = [
@@ -26,6 +31,9 @@ const ClientShowcase = () => {
     }
   ];
 
+  // Clone clients array to create a seamless loop effect
+  const duplicatedClients = [...clients, ...clients];
+
   return (
     <section className="section-padding" id="clients">
       <div className="container mx-auto">
@@ -36,16 +44,23 @@ const ClientShowcase = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-          {clients.map((client, index) => (
-            <div key={index} className="flex justify-center items-center">
-              <img 
-                src={client.logo} 
-                alt={`${client.name} logo`} 
-                className="max-h-24 hover:scale-105 transition-all duration-300"
-              />
+        <div className="mb-16 overflow-hidden">
+          <div className="w-full relative">
+            <div className="animate-marquee flex space-x-12">
+              {duplicatedClients.map((client, index) => (
+                <div 
+                  key={`logo-${index}`} 
+                  className="flex justify-center items-center min-w-[150px] transition-all duration-300 hover:scale-110 hover:shadow-lg"
+                >
+                  <img 
+                    src={client.logo} 
+                    alt={`${client.name} logo`} 
+                    className="max-h-24"
+                  />
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
 
         <Separator className="my-12 bg-gray-200" />

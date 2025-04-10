@@ -9,6 +9,7 @@ const HomePage = () => {
   // Add IDs to each section for smooth scrolling
   useEffect(() => {
     // This can be used for any additional homepage initialization
+    document.title = "Furi - AI-Powered Digital Marketing Agency";
   }, []);
 
   return (
