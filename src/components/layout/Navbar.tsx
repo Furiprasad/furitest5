@@ -55,8 +55,8 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center" onClick={scrollToTop}>
-              <span className="font-heading text-2xl font-bold text-primary-800">
-                Furi<span className="text-secondary-800">Media</span> Services
+              <span className="font-heading text-2xl font-bold text-red-600">
+                Furi<span className="text-black">Media</span> Services
               </span>
             </Link>
           </div>
@@ -67,7 +67,7 @@ const Navbar = () => {
                 <Link
                   key={link.name}
                   to={link.path}
-                  className="font-medium text-gray-800 hover:text-primary-600 transition-colors"
+                  className="font-medium text-gray-800 hover:text-red-600 transition-colors"
                   onClick={scrollToTop}
                 >
                   {link.name}
@@ -77,7 +77,7 @@ const Navbar = () => {
           </div>
 
           <div className="hidden md:block">
-            <Button variant="default" className="bg-accent-500 hover:bg-accent-600">
+            <Button variant="default" className="bg-red-600 hover:bg-red-700">
               <Link to="/contact" onClick={scrollToTop}>Get Started</Link>
             </Button>
           </div>
@@ -85,7 +85,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-primary-800 focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-red-600 focus:outline-none"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -104,7 +104,7 @@ const Navbar = () => {
             <Link
               key={link.name}
               to={link.path}
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:text-primary-600 hover:bg-gray-50"
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:text-red-600 hover:bg-gray-50"
               onClick={() => {
                 setIsOpen(false);
                 scrollToTop();
@@ -116,7 +116,7 @@ const Navbar = () => {
           <div className="px-3 py-3">
             <Button
               variant="default"
-              className="w-full bg-accent-500 hover:bg-accent-600"
+              className="w-full bg-red-600 hover:bg-red-700"
             >
               <Link 
                 to="/contact"
