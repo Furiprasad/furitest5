@@ -1,15 +1,19 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  return <footer className="bg-gray-900 text-white" id="footer">
+  
+  return (
+    <footer className="bg-gray-900 text-white" id="footer">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-16">
           <div>
             <div className="mb-6">
               <Link to="/" className="font-heading text-2xl font-bold">
-                Furi<span className="text-secondary-400"></span> Services
+                <span className="text-red-500">Furi</span>
               </Link>
             </div>
             <p className="text-gray-400 mb-6">
@@ -97,17 +101,17 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-6">Contact Us</h3>
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
-                <MapPin className="text-secondary-400 mt-1 flex-shrink-0" size={18} />
+                <MapPin className="text-red-500 mt-1 flex-shrink-0" size={18} />
                 <span className="text-gray-400">
                   TPT Colony, Balayya Sastri Layout, Seethammadara, Visakhapatnam, Andhra Pradesh 530013
                 </span>
               </li>
               <li className="flex items-center space-x-3">
-                <Phone className="text-secondary-400 flex-shrink-0" size={18} />
+                <Phone className="text-red-500 flex-shrink-0" size={18} />
                 <span className="text-gray-400">7416992299</span>
               </li>
               <li className="flex items-center space-x-3">
-                <Mail className="text-secondary-400 flex-shrink-0" size={18} />
+                <Mail className="text-red-500 flex-shrink-0" size={18} />
                 <span className="text-gray-400">furimediaservices@gmail.com</span>
               </li>
             </ul>
@@ -116,10 +120,12 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 py-8">
           <div className="text-center text-gray-400">
-            <p>© {currentYear} Furi Media Services. All rights reserved.</p>
+            <p>© {currentYear} Furi. All rights reserved.</p>
           </div>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
+
 export default Footer;
