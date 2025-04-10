@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Tool, MessageSquare, QrCode, Mail } from "lucide-react";
+import { Menu, X, Wrench, MessageSquare, QrCode, Mail } from "lucide-react";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -113,7 +113,7 @@ const Navbar = () => {
                   <NavigationMenuItem>
                     <NavigationMenuTrigger className="font-medium text-gray-800 hover:text-red-600 transition-colors bg-transparent">
                       <span className="flex items-center">
-                        <Tool className="mr-1 h-4 w-4" />
+                        <Wrench className="mr-1 h-4 w-4" />
                         Free Tools
                       </span>
                     </NavigationMenuTrigger>
@@ -175,7 +175,7 @@ const Navbar = () => {
           {/* Mobile Tools Dropdown */}
           <div className="px-3 py-2">
             <div className="font-medium text-gray-800 mb-2 flex items-center">
-              <Tool className="mr-2 h-4 w-4" />
+              <Wrench className="mr-2 h-4 w-4" />
               Free Tools
             </div>
             <div className="pl-6 space-y-2">
