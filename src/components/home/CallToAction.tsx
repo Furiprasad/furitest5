@@ -37,7 +37,10 @@ const CallToAction = () => {
               variant="outline"
               className="border-white text-white hover:bg-white/10"
             >
-              <Link to="/services" onClick={scrollToTop}>Explore Our Services</Link>
+              <Link to="/services" className="flex items-center gap-2" onClick={scrollToTop}>
+                Explore Our Services
+                <ArrowRight size={16} />
+              </Link>
             </Button>
           </div>
         </div>
