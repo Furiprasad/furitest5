@@ -90,7 +90,7 @@ const Navbar = () => {
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center" onClick={scrollToTop}>
               <img 
-                src="/lovable-uploads/10c78178-66cf-48bd-9016-789d7df13ba8.png" 
+                src="/lovable-uploads/500a0707-e998-4e3d-8f79-b2fd82d68331.png" 
                 alt="Furi Logo" 
                 className="h-8"
               />

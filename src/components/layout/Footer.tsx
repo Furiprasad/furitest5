@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
@@ -13,7 +14,7 @@ const Footer = () => {
             <div className="mb-6">
               <Link to="/" className="font-heading">
                 <img 
-                  src="/lovable-uploads/10c78178-66cf-48bd-9016-789d7df13ba8.png" 
+                  src="/lovable-uploads/500a0707-e998-4e3d-8f79-b2fd82d68331.png" 
                   alt="Furi Logo" 
                   className="h-8 brightness-0 invert"
                 />
