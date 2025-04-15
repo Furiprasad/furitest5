@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -34,8 +33,7 @@ const CallToAction = () => {
             </Button>
             <Button
               size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white/10"
+              className="bg-white text-primary-800 hover:bg-white/90"
             >
               <Link to="/services" className="flex items-center gap-2" onClick={scrollToTop}>
                 Explore Our Services

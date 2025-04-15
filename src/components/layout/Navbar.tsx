@@ -89,9 +89,11 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center" onClick={scrollToTop}>
-              <span className="font-heading text-2xl font-bold text-red-600">
-                Furi
-              </span>
+              <img 
+                src="/lovable-uploads/10c78178-66cf-48bd-9016-789d7df13ba8.png" 
+                alt="Furi Logo" 
+                className="h-8"
+              />
             </Link>
           </div>
 

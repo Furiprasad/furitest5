@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
@@ -12,8 +11,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-16">
           <div>
             <div className="mb-6">
-              <Link to="/" className="font-heading text-2xl font-bold">
-                <span className="text-red-500">Furi</span>
+              <Link to="/" className="font-heading">
+                <img 
+                  src="/lovable-uploads/10c78178-66cf-48bd-9016-789d7df13ba8.png" 
+                  alt="Furi Logo" 
+                  className="h-8 brightness-0 invert"
+                />
               </Link>
             </div>
             <p className="text-gray-400 mb-6">
